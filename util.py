@@ -1,6 +1,6 @@
 class Article:
     def __init__(self, title, abstract, authors, citations_number, year, link):
-        
+
         self.title = title
         self.abstract = abstract
         self.authors = authors
@@ -18,9 +18,3 @@ class Article:
             "year": self.year,
             "link": self.link,
         }
-
-
-letter = Article('aboudi', 'long text', 'Mosbah', 4, 20016, "asdfghjkl")
-
-print(letter.to_json())
-
