@@ -1,0 +1,8 @@
+( 
+    TITLE ( "MLOps" ) OR ABS ( "MLOps" ) AND LANGUAGE ( english )
+    OR TITLE ( "Machine Learning DevOps" ) OR ABS ( "Machine Learning DevOps" )
+    OR TITLE ( "ML-Ops" ) OR ABS ( "ML-Ops" ) 
+    OR TITLE ( "ML-DevOps" ) OR ABS ( "ML-DevOps" ) 
+) 
+AND PUBYEAR > 2014 
+AND ( LIMIT-TO ( DOCTYPE , "cp" ) OR LIMIT-TO ( DOCTYPE , "ar" ) )
