@@ -16,15 +16,6 @@ def load_data(nrows):
     return data
 
 
-# # Create a text element and let the reader know the data is loading.
-# data_load_state = st.text('Loading data...')
-# # Load 10,000 rows of data into the dataframe.
-# data = load_data(10000)
-# # Notify the reader that the data was successfully loaded.
-# data_load_state.text("Done! (using st.cache_data)")
-
-# st.subheader('Raw data')
-# st.write(data)
 
 st.header('My Search', divider='rainbow')
 
@@ -34,3 +25,21 @@ search_text = st.text_input(
     label_visibility='collapsed'
     )
 
+
+sample_data = {
+    "title": "Mlp-mixer: An all-mlp architecture for vision",
+    "abstract": "This is a sample abstract for the MLP-Mixer paper.",
+    "authors": ["IO Tolstikhin", "N Houlsby", "A Kolesnikov"],
+    "citations_number": 1657,
+    "year": 2021,
+    "link": "https://proceedings.neurips.cc/paper/2021/hash/cba0a4ee5ccd02fda0fe3f9a3e7b89fe-Abstract.html",
+    "pdf_link": "https://proceedings.neurips.cc/paper/2021/file/cba0a4ee5ccd02fda0fe3f9a3e7b89fe-Paper.pdf",
+}
+
+
+st.subheader(f"[{sample_data["title"]}]({sample_data["link"]})")
+st.markdown(f"""
+    *Authors:* {' - '.join(sample_data['authors'])} | *Citations:* {sample_data['citations_number']}
+    """)
+st.write(sample_data["abstract"])
+pdf_download_button = st.button("Download PDF")
