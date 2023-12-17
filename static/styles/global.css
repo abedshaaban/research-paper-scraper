@@ -55,12 +55,12 @@
   gap: 3px;
 }
 
-.article-header a,
+.article-header-a,
 .article-header h2 {
   width: 100%;
 }
 
-.article-header > button {
+.article-header-btn {
   color: white;
   height: fit-content;
   font-weight: 600;
@@ -69,10 +69,11 @@
   padding: 3px 9px;
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
   transition-duration: 0.3s;
 }
 
-.article-header > button:hover {
+.article-header-btn:hover {
   background-color: rgba(255, 0, 0, 0.7);
 }
 

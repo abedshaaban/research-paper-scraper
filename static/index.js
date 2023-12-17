@@ -7,23 +7,33 @@ function ArticleLayout(
   link,
   pdf_link
 ) {
-  const writers = authors?.map((user, index) => {
+  const writers = authors?.map((user) => {
     return `&nbsp;${user}`;
   });
 
   return `
     <div class="article">
         <div class="flex-row article-header">
-        <a href=${link} target="_blank"><h2>${title}</h2></a>
-        <button>PDF</button>
-        </div>
-        <div class="flex-row article-info">
-        <i>Authors:</i> &nbsp; ${writers} &nbsp;| &nbsp;<i>Citations:</i> &nbsp; ${citations_number}
+          <a href=${link} target="_blank" class="article-header-a">
+            <h2>${title}</h2>
+          </a>
+
+          ${
+            pdf_link !== ""
+              ? `
+              <a href=${pdf_link} target="_blank" class="article-header-btn">
+                PDF
+              </a>
+            `
+              : ""
+          }
         </div>
 
-        <div class="article-abstract">
-        ${abstract}
+        <div class="flex-row article-info">
+          <i>Authors:</i> &nbsp; ${writers} &nbsp;| &nbsp;<i>Citations:</i> &nbsp; ${citations_number}
         </div>
+
+        <div class="article-abstract"> ${abstract} </div>
     </div>
     `;
 }
@@ -67,7 +77,7 @@ search_btn.addEventListener("click", async () => {
       // art.year,
       2004,
       art.link,
-      art.pdf_link
+      art.pdf
     );
   });
 });
