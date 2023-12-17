@@ -1,7 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Oswald:wght@300&family=Roboto&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10;
 }
 
 .search-bar {
@@ -10,7 +20,7 @@
   display: flex;
   justify-content: center;
   flex-flow: row;
-  gap: 10px;
+  gap: 15px;
 }
 
 .search-bar-input {
@@ -27,4 +37,51 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.results-div {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.article-header a,
+.article-header h2 {
+  width: 100%;
+}
+
+.article-header > button {
+  color: white;
+  height: fit-content;
+  font-weight: 600;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  padding: 3px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.article-header > button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.article-info {
+  font-size: 14px;
+  color: grey;
+}
+
+.article-abstract {
+  width: 100%;
+  font-size: 16px;
 }
