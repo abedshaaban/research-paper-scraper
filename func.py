@@ -60,7 +60,11 @@ def get_google_data(q):
         citation_list = [link.text for link in citation_div]
         if len(citation_list) >=4:
             if len(citation_list[4].split(" ")) >= 2:
-                citation_number = citation_list[4].split(" ")[2]
+                citation_number = citation_list[4].split(" ")
+
+                if len(citation_number) >= 2:
+                    citation_number = citation_number.pop()
+
             else:
                 citation_number = ''
         else:

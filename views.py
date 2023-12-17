@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
+from func import get_google_data
 
 views = Blueprint(__name__, "views")
 
@@ -10,6 +11,6 @@ def home():
 def get_q_results():
     q = request.get_json()
 
-    result = [{'res': 'data'},{'res': 'data'},{'res': 'data'},{'res': 'data'},]
+    result = get_google_data(q)
 
     return jsonify(result)
