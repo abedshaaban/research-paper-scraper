@@ -78,7 +78,8 @@ def get_google_data(q):
                 authors = authors,
                 citations_number = citation_number,
                 year = 2004,
-                link = link
+                link = link,
+                pdf_link = pdf_link,
             ).to_json()
         )
 
